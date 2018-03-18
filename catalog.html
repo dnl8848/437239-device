@@ -7,22 +7,24 @@
   <body>
     <header>
       <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="#" width="" height="" alt="Логотип Device">
-      </a>
-        <ul class="user-navigation-left">
-          <li class="search-header"><a href="#">Поиск по сайту</a></li>
-          <li ><a href="#">Каталог товаров</a></li>
+        <img src="img/logo-header.png" width="164" height="36" alt="Логотип Device">
+        <form class="search">
+          <img src="img/search.svg">
+          <input type="search" name="search-field" placeholder="Поиск по сайту" >
+          <input type="submit" name="search-button" value="Найти">
+        </form>
+        <ul>
+          <li class="catalog-header"><a href="#">Каталог товаров</a></li>
         </ul>
-        <ul class="user-navigation-center">
-          <li class="login-link-header"><a href="#">Валентин Петухов</a></li>
-          <li class="delivery-header"><a href="#">Выйти</a></li>
+        <ul class="user-panel-header">
+          <li class="login-header"><button><img src="img/user.svg">Валентин Петухов</button></li>
+          <li class="logout-header"><button><img src="img/user.svg">Выйти</button></li>
+          <li class="compare-header"><button><img src="img/compare.svg">Сравнить</button></li>
+          <li class="basket-header"><button><img src="img/cart.svg">Корзина</button></li>
+        </ul>
+        <ul class="user-navigation">
           <li class="delivery-header"><a href="#">Доставка</a></li>
           <li class="guarantees-header"><a href="#">Гарантии</a></li>
-        </ul>
-        <ul class="user-navigation-right">
-          <li class="compare-header"><a href="#">Сравнить</a></li>
-          <li class="basket-header"><a href="#">Корзина</a></li>
           <li class="contacts-header"><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -34,53 +36,77 @@
         <li><a href="#">Каталог товаров</a></li>
         <li><a>Моноподы для селфи</a></li>
       </ul>
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-<!--Здесь будет форма-->
-      </section>
-      <section class="class=sorting">
-        <h2 class="visually-hidden">Сортировка товаров</h2>
-<!--Здесь будет форма-->
+      <aside class="filter">
+        <form>
+          <div class="price-range">
+            <b>Стоимость</b><br>
+            <!--Здесь будет бегунок для цены-->
+          </div>
+          <div class="Color-filter">
+            <b>Цвет</b></br>
+            <input type="checkbox" name="Color-checkbox" value="black" checked>Черный<br>
+            <input type="checkbox" name="Color-checkbox" value="white">Белый<br>
+            <input type="checkbox" name="Color-checkbox" value="blue" checked>Синий<br>
+            <input type="checkbox" name="Color-checkbox" value="red" checked>Красный<br>
+            <input type="checkbox" name="Color-checkbox" value="pink">Розовый<br>
+          </div>
+          <div class="Bluetooth-filter">
+            <b>Bluetooth</b><br>
+            <input type="radio" name="Bluetooth" value="yes" checked>Есть<br>
+            <input type="radio" name="Bluetooth" value="no">Нет<br>
+          </div>
+          <button type="submit" class="show-items">Показать</button>
+        </form>
+      </aside>
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <ul class="sorting-options">
+          <li><a href="catalog.html">По цене</a></li>
+          <li><a href="catalog.html">По типу</a></li>
+          <li><a href="catalog.html">По популярности</a></li>
+        </ul>
+        <a href="catalog.html" class="sorting-up"></a>
+        <a href="catalog.html" class="sorting-down"></a>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
               <h3><a href="#">Любительская селфи-палка</a></h3>
-              <p class="item-image"><img src="#" width="" height="" alt="Любительская селфи-палка"></p>
-              <p class="catalog-item-price">500 руб.</p>
+              <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              500 руб.
             </li>
             <li class="catalog-item">
-              <h3><a href="#">Профессиональная селфи-палка</a></h3>
-              <p class="item-image"><img src="#" width="" height="" alt="Профессиональная селфи-палка"></p>
+              <h3><a href="catalog.html">Профессиональная селфи-палка</a></h3>
+              <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <p class="catalog-item-price">1500 руб.</p>
             </li>
             <li class="catalog-item">
-              <h3><a href="#">Непотопляема селфи-палка</a></h3>
-              <p class="item-image"><img src="#" width="" height="" alt="Непотопляемая селфи-палка"></p>
+              <h3><a href="catalog.html">Непотопляемая селфи-палка</a></h3>
+              <p class="item-image"><img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка"></p>
               <p class="catalog-item-price">2500 руб.</p>
             </li>
             <li class="catalog-item">
-              <h3><a href="#">Селфи-палка следуй за мной</a></h3>
-              <p class="item-image"><img src="#" width="" height="" alt="Селфи-палка следуй за мной"></p>
+              <h3><a href="catalog.html">Селфи-палка следуй за мной</a></h3>
+              <p class="item-image"><img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной"></p>
               <p class="catalog-item-price">4900 руб.</p>
             </li>
           </ul>
         </section>
         <section class="pagination-panel">
-          <p class="pagination-back"><a>Назад</a></p>
+          <p class="pagination-back"><a href="catalog.html">Назад</a></p>
           <ul class="pagination-list">
             <li class="pagination-item"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="catalog.html">2</a></li>
+            <li class="pagination-item"><a href="catalog.html">3</a></li>
           </ul>
-          <p class="pagination-forward"><a href="#">Вперед</a></p>
+          <p class="pagination-forward"><a href="catalog.html">Вперед</a></p>
         </section>
     </main>
     <footer>
       <section class="left-footer-part">
         <h4 class="visually-hidden">Адрес Девайс</h4>
-        <img src="#" width="" height="" alt="Логотип Девайс" class="logo-footer">
+        <img src="img/logo-footer-yellow.png" width="163" height="36" alt="Логотип Девайс" class="logo-footer">
         <p>г. Москва, ул. Строителей, 15</p>
       </section>
       <section class="center-footer-part">
@@ -99,13 +125,13 @@
       <section class="right-footer-part">
         <h4 class="visually-hidden">Панель пользователя Девайс</h4>
         <ul class="user-navigation-footer">
-          <li><a href="#">Валентин Путехов</a></li>
-          <li><a href="#">Выйти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a href="catalog.html">Валентин Путехов</a></li>
+          <li><a href="catalog.html">Выйти</a></li>
+          <li><a href="catalog.html">Сравнить</a></li>
+          <li><a href="catalog.html">Корзина</a></li>
         </ul>
         <p class="phone-footer">Тел. +7(495) 495-95-95</p>
-        <a><img src="#" width="" height="" alt="Логотип htmlacademy.ru"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="Логотип htmlacademy.ru"></a>
       </section>
     </footer>
   </body>
