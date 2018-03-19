@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <!-- Как подгрузить шрифт и его начертания? -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav class="main-navigation">
-        <img src="img/logo-header.png" width="164" height="36" alt="Логотип Device">
+        <a href="index.html"><img src="img/logo-header.png" width="164" height="36" class="logo-header" alt="Логотип Device"></a>
         <form class="search">
           <img src="img/search.svg">
           <input type="search" name="search-field" placeholder="Поиск по сайту" >
-          <input type="submit" name="search-button" value="Найти">
+          <button type="submit" name="search-button" value="Найти">Найти</button>
         </form>
-        <ul>
-          <li class="catalog-header"><a href="#">Каталог товаров</a></li>
-        </ul>
+        <p class="catalog-header">
+          <a href="catalog.html">Каталог товаров</a>
+        </p>
         <ul class="user-panel-header">
-          <li class="login-header"><button><img src="img/user.svg">Войти</button></li>
-          <li class="compare-header"><button><img src="img/compare.svg">Сравнить</button></li>
-          <li class="basket-header"><button><img src="img/cart.svg">Корзина</button></li>
+          <li class="login-header"><a href="#">Войти</a></li>
+          <li class="compare-header"><a href="#">Сравнить</a></li>
+          <li class="basket-header"><a href="#">Корзина</a></li>
         </ul>
         <ul class="user-navigation">
           <li class="delivery-header"><a href="#">Доставка</a></li>
@@ -41,11 +44,11 @@
             <div class="selfi-details"><a href="index.html">Подробнее</a></div>
             <dl class="selfi-numbers">
               <dt>Длина палки</dt>
-              <dd>8,5м</dd>
+              <dd class="definition-numbers">8,5м</dd>
               <dt>Вес палки</dt>
-              <dd>5 кг</dd>
+              <dd class="definition-numbers">5 кг</dd>
               <dt>Материал</dt>
-              <dd>Карбон</dd>
+              <dd class="definition-numbers">Карбон</dd>
             </dl>
           </section>
         </li>
@@ -58,7 +61,7 @@
             <div class="bangle-details"><a href="index.html">Подробнее</a></div>
             <dl class="bangle-numbers">
               <dt>Без подзарядки</dt>
-              <dd>48 часов</dd>
+              <dd class="definition-numbers">48 часов</dd>
             </dl>
           </section>
         </li>
@@ -71,9 +74,9 @@
             <div class="quadrupter-details"><a href="index.html">Подробнее</a></div>
             <dl class="quadrupter-numbers">
               <dt>Дальность полета</dt>
-              <dd>800 м</dd>
+              <dd class="definition-numbers">800 м</dd>
               <dt>Радиус поражения</dt>
-              <dd>50 м</dd>
+              <dd class="definition-numbers">50 м</dd>
             </dl>
           </section>
         </li>
