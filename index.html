@@ -12,12 +12,21 @@
       <nav class="main-navigation">
         <a href="index.html"><img src="img/logo-header.png" width="164" height="36" class="logo-header" alt="Логотип Device"></a>
         <form class="search">
-          <img src="img/search.svg">
-          <input type="search" name="search-field" placeholder="Поиск по сайту" >
-          <button type="submit" name="search-button" value="Найти">Найти</button>
+          <input type="search" class="search-field" placeholder="Поиск по сайту" >
+          <button type="submit" class="search-button" value="Найти">Найти</button>
         </form>
         <p class="catalog-header">
           <a href="catalog.html">Каталог товаров</a>
+          <div class="catalog-submenu">
+            <ul class="submenu-list">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </div>
         </p>
         <ul class="user-panel-header">
           <li class="login-header"><a href="#">Войти</a></li>
@@ -154,21 +163,26 @@
           </ul>
         </section>
         <section class="about-us">
-          <h5>О нас</h5>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
-          <ul class="logistic-companies">
-            <li><a href="#">Деловые линии</a></li>
-            <li><a href="#">Автотрейдинг</a></li>
-            <li><a href="#">ЖелДорЭкспедиция</a></li>
-          </ul>
-          <div class="about-us-link"><a href="#">Подробнее о нас</a></div>
+          <div>
+            <h5>О нас</h5>
+            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
+            <ul class="logistic-companies">
+              <li><a href="#">Деловые линии</a></li>
+              <li><a href="#">Автотрейдинг</a></li>
+              <li><a href="#">ЖелДорЭкспедиция</a></li>
+            </ul>
+            <div class="about-us-link"><a href="#">Подробнее о нас</a></div>
+        </div>
+        <div>
+          <h5>Контакты</h5>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img src="img/map.jpg" width="" height="" alt="Схема проезда к Девайсу" class="map-image" >
           <button class="write-us-button">Напишите нам</button>
+        </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
       <section class="left-footer-part">
         <img src="img/logo-footer-yellow.png" width="163" height="36" alt="Логотип Девайс" class="logo-footer">
         <p>г. Москва, ул. Строителей, 15</p>
