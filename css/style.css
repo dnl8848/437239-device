@@ -86,8 +86,7 @@ img {
     display: none;
 }
 .search-form {
-    display: flex;
-    justify-content: flex-start;
+    position: relative;
     width: 450px;
     height: 49px;
     margin-bottom: 30px;
@@ -331,8 +330,7 @@ a.index-catalog::after {
     min-height: 495px;
 }
 .main-item img {
-    display: flex;
-    justify-content: flex-start;
+
 }
 .slider-first img {
     position: relative;
@@ -579,8 +577,6 @@ a.index-catalog::after {
     background-color: #e5e5e5;
 }
 .services-btn {
-    display: flex;
-    justify-content: flex-start;
     position: relative;
     top: -20px;
     width: 300px;
@@ -636,12 +632,9 @@ a.index-catalog::after {
     background-color: #000;
 }
 .services-item {
-    display: flex;
-    justify-content: flex-end;
     position: relative;
     top: -42px;
     display: none;
-
     width: 715px;
     margin-right: 45px;
     padding-top: 10px;
@@ -661,8 +654,7 @@ a.index-catalog::after {
     background-position: 543px 1px;
 }
 .services-item h2, .services-item p {
-    display: flex;
-    justify-content: flex-start;
+
     width: 440px;
     margin-top: 0;
     margin-bottom: 26px;
@@ -672,8 +664,6 @@ a.index-catalog::after {
     line-height: 30px;
 }
 .services-item img {
-    display: flex;
-    justify-content: flex-end;
 }
 
 .partners {
