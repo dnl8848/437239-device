@@ -47,10 +47,9 @@ img {
 .container {
     display: flex;
     justify-content: space-between;
-    margin-right: 153px;
-    margin-left: 140px;
-    width: 1240px;
-    flex-grow: 1;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1160px;
 
 }
 .index-header {
@@ -66,9 +65,8 @@ img {
     padding-left: 60px;
 }
 .logo {
-    position: relative;
-    top: -62px;
-    left: -453px;
+    position: absolute;
+    margin-top: -61px;
     z-index: 0;
     font-size: 48px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
@@ -79,12 +77,18 @@ img {
 .logo[href]:hover, body {
     color: #464646;
 }
+
+.logo:hover {
+    opacity: 0.6;
+}
+
 .logo[href]:active {
     color: #666;
 }
 .hidden {
     display: none;
 }
+
 .search-form {
     position: relative;
     width: 450px;
@@ -145,11 +149,16 @@ img {
     display: inline-block;
     vertical-align: bottom;
 }
+
+.panel-inline {
+  display: flex;
+}
 .user-block {
+    position: relative;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-end;
     width: 550px;
-    margin-top: -50px;
     list-style: none;
 }
 .user-block a {
@@ -177,7 +186,6 @@ a.enter::before {
     content: "";
     position; relative;
     display: inline-block;
-    margin-top: -10px;
     padding-right: 14px;
     width: 14px;
     height: 13px;
@@ -190,6 +198,7 @@ a.basket::before {
   position; relative;
   display: inline-block;
   padding-right: 6px;
+  padding-bottom: -2px;
   width: 14px;
   height: 13px;
   background-image: url(../img/cart.svg);
@@ -203,6 +212,7 @@ a.compare::before {
   content: "";
   position; relative;
   display: inline-block;
+  padding-bottom: -4px;
   padding-right: 6px;
   width: 14px;
   height: 13px;
@@ -214,7 +224,6 @@ a.compare::before {
 }
 .main-nav {
     position: relative;
-    clear: both;
 }
 .main-nav ul {
     padding-left: 0;
@@ -230,7 +239,7 @@ a.compare::before {
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: .2em;
+    letter-spacing: 3px;
 }
 .main-nav a:hover {
     opacity: .6;
@@ -352,6 +361,7 @@ a.index-catalog::after {
     z-index: 3;
     padding-left: 0;
     font-size: 0;
+    background-image: url("../img/slider-button-empty.svg") no-repeat;
 }
 .slider-btn li {
     margin-left: 23px;
@@ -376,7 +386,7 @@ a.index-catalog::after {
     opacity: 1;
 }
 #main-item-btn-1:checked~.index-main #slide-1, #main-item-btn-2:checked~.index-main #slide-2, #main-item-btn-3:checked~.index-main #slide-3, #services-btn-1:checked~.index-main #services-courier, #services-btn-2:checked~.index-main #services-warranty, #services-btn-3:checked~.index-main #services-credit {
-    display: block;
+    display: flex;
 }
 
 .main-description {
@@ -437,8 +447,9 @@ a.index-catalog::after {
 }
 .device-btn {
     position: relative;
-    display: inline-block;
+    display: flex;
     padding: 9px 5px;
+    left: 44px;
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     vertical-align: top;
@@ -455,9 +466,9 @@ a.index-catalog::after {
     content: "";
     position: absolute;
     top: 40%;
-    left: 0;
+    left: -44px;
     z-index: -1;
-    width: 100%;
+    width: 220px;
     height: 20%;
     background-color: #f0c52e;
     transition: all .2s ease-in-out;
@@ -654,22 +665,19 @@ a.index-catalog::after {
     background-position: 543px 1px;
 }
 .services-item h2, .services-item p {
-
     width: 440px;
     margin-top: 0;
     margin-bottom: 26px;
     letter-spacing: .018em;
 }
 .services-item p {
+    padding-top: 100px;
+    padding-right: 300px;
     line-height: 30px;
-}
-.services-item img {
 }
 
 .partners {
     margin-bottom: 95px;
-    margin-left: 140px;
-    margin-right: 143px;
 }
 
 .partner-link a {
@@ -682,6 +690,13 @@ a.index-catalog::after {
 .partner-link img {
     width: 260px;
     height: 100px;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+.partner-link img:hover {
+    filter: none;
+    opacity: 1;
 }
 
 .about-company {
@@ -904,8 +919,7 @@ a.footer-login::before {
   height: 12px;
   left: -5px;
   top: 0%;
-  background-image: url(../img/user.svg);
-  background-blend-mode: color: #ffc600;
+  background-image: url(../img/user-color.svg);
   margin-right: 2px;
 }
 
@@ -1089,8 +1103,13 @@ a.footer-login::before {
     background-color: #f7e296;
 }
 .catalog-header .logo {
-    top: -61px;
-    left: -453px;
+    position: absolute;
+    top: 32px;
+    left: 55px;
+}
+
+.panel-inline-catalog {
+    display: flex;
 }
 
 .user-block-catalog {
@@ -1111,10 +1130,14 @@ a.footer-login::before {
     margin-left: 60px;
     letter-spacing: .012em;
 }
+
+.catalog-tittle {
+    flex-wrap: wrap;
+}
+
 .breadscrumbs {
     display: inline-block;
     margin-top: 50px;
-    margin-left: -600px;
     font-size: 0;
 }
 
