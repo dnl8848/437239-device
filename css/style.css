@@ -170,10 +170,6 @@ img {
     letter-spacing: .012em;
 }
 
-a.exit {
-    margin-left: 20px;
-    padding-left: 0;
-}
 
 
 .filter-form input[type=checkbox], .filter-form input[type=radio], a.exit::before {
@@ -328,8 +324,11 @@ a.index-catalog::after {
     margin-bottom: 82px;
 }
 .main-item {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     top: -108px;
+    width: 100%;
     display: none;
     min-height: 400px;
     padding-right: -50px;
@@ -361,7 +360,8 @@ a.index-catalog::after {
     z-index: 3;
     padding-left: 0;
     font-size: 0;
-    background-image: url("../img/slider-button-empty.svg") no-repeat;
+    background-image: url("../img/slider-button-empty.svg");
+    background-repeat: no-repeat;
 }
 .slider-btn li {
     margin-left: 23px;
@@ -385,15 +385,23 @@ a.index-catalog::after {
 #main-item-btn-1:checked~.index-main label[for=main-item-btn-1], #main-item-btn-2:checked~.index-main label[for=main-item-btn-2], #main-item-btn-3:checked~.index-main label[for=main-item-btn-3] {
     opacity: 1;
 }
-#main-item-btn-1:checked~.index-main #slide-1, #main-item-btn-2:checked~.index-main #slide-2, #main-item-btn-3:checked~.index-main #slide-3, #services-btn-1:checked~.index-main #services-courier, #services-btn-2:checked~.index-main #services-warranty, #services-btn-3:checked~.index-main #services-credit {
+#main-item-btn-1:checked~.index-main #slide-1,
+#main-item-btn-2:checked~.index-main #slide-2,
+#main-item-btn-3:checked~.index-main #slide-3 {
     display: flex;
 }
 
+
+#services-btn-1:checked~.index-main #services-courier,
+#services-btn-2:checked~.index-main #services-warranty,
+#services-btn-3:checked~.index-main #services-credit {
+  display: block;
+}
+
 .main-description {
-    display: flex;
-    flex-direction: column;
-    padding-left: 128px;
+    position: relative;
     width: 511px;
+    margin-right: 55px;
     padding-top: 35px;
 }
 .main-description::before {
@@ -447,13 +455,11 @@ a.index-catalog::after {
 }
 .device-btn {
     position: relative;
-    display: flex;
+    display: block;
     padding: 9px 5px;
     left: 44px;
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
-    vertical-align: top;
-    text-align: center;
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
@@ -589,7 +595,9 @@ a.index-catalog::after {
 }
 .services-btn {
     position: relative;
+    display: block;
     top: -20px;
+    left: -20px;
     width: 300px;
     margin-top: 0;
     padding-left: 0;
@@ -599,7 +607,7 @@ a.index-catalog::after {
     content: "";
     position: absolute;
     top: 41%;
-    right: 16px;
+    right: 0px;
     display: block;
     width: 7px;
     height: 319px;
@@ -613,9 +621,9 @@ a.index-catalog::after {
 }
 .services-btn label {
     z-index: 1;
-    min-width: 135px;
-    max-width: 250px;
-    padding-left: 20px;
+    min-width: 0px;
+    max-width: 150px;
+    padding-left: 0px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -638,7 +646,7 @@ a.index-catalog::after {
 }
 #services-btn-1:checked~.index-main label[for=services-btn-1]::before, #services-btn-2:checked~.index-main label[for=services-btn-2]::before, #services-btn-3:checked~.index-main label[for=services-btn-3]::before {
     top: 0;
-    width: 280px;
+    width: 255px;
     height: 100%;
     background-color: #000;
 }
@@ -671,7 +679,7 @@ a.index-catalog::after {
     letter-spacing: .018em;
 }
 .services-item p {
-    padding-top: 100px;
+    padding-top: 5px;
     padding-right: 300px;
     line-height: 30px;
 }
@@ -705,7 +713,6 @@ a.index-catalog::after {
 }
 
 .about-company h2 {
-    margin-top: 45px;
     margin-bottom: 38px;
     margin-left: -3px;
     letter-spacing: .012em;
@@ -720,7 +727,6 @@ a.index-catalog::after {
 .contacts {
     position: relative;
     display: block;
-    left: -80px;
     width: 560px;
 }
 .about-us li::before, .about-us::before, .contacts::before, .footer-left::after {
@@ -805,6 +811,7 @@ a.index-catalog::after {
     margin-left: -2px;
     font-size: 48px;
     color: #ffc600;
+    margin-top: -10px;
     letter-spacing: .012em;
 }
 .footer-left a[href]:hover {
@@ -919,7 +926,7 @@ a.footer-login::before {
   height: 12px;
   left: -5px;
   top: 0%;
-  background-image: url(../img/user-color.svg);
+  svg: url(../img/user-color.svg);
   margin-right: 2px;
 }
 
@@ -1104,8 +1111,8 @@ a.footer-login::before {
 }
 .catalog-header .logo {
     position: absolute;
-    top: 32px;
-    left: 55px;
+    top: 35px;
+    left: 56px;
 }
 
 .panel-inline-catalog {
@@ -1114,7 +1121,7 @@ a.footer-login::before {
 
 .user-block-catalog {
   display: flex;
-  margin-top: -35px;
+  margin-top: 16px;
   list-style: none;
   text-decoration: none;
 }
@@ -1124,10 +1131,32 @@ a.footer-login::before {
   color: #000;
 }
 
+.user-block-catalog .enter {
+  margin-left: 50px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.exit {
+  margin-right: 0px;
+  color: #000;
+}
+
+.user-block-catalog .compare {
+  margin-left: 64px;
+  color: #000;
+}
+
+.user-block-catalog .basket {
+  margin-left: 45px;
+  color: #000;
+}
+
 .catalog-main h1 {
     margin-top: 33px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     margin-left: 60px;
+    width: 100%;
     letter-spacing: .012em;
 }
 
@@ -1137,7 +1166,8 @@ a.footer-login::before {
 
 .breadscrumbs {
     display: inline-block;
-    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 48px;
     font-size: 0;
 }
 
@@ -1156,6 +1186,7 @@ a.footer-login::before {
     width: 7px;
     height: 7px;
     background-image: url(../img/nav-arrow.svg);
+    background-repeat: no-repeat;
 }
 .breadscrumbs li:nth-child(2)::after {
     right: 15px;
@@ -1183,7 +1214,7 @@ a.footer-login::before {
     background: linear-gradient(to right, #dbdbdb 0%, #dbdbdb 49%, #ebebeb 50%, #ebebeb 100%);
 }
 .catalog-sort, .filter-tittle {
-    padding-top: 24px;
+    padding-top: 26px;
     padding-bottom: 26px;
 }
 .filter-tittle {
@@ -1215,10 +1246,11 @@ a.footer-login::before {
 }
 .catalog-sort .catalog-sort-type {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 499px;
     padding-left: 50px;
 }
+
 .catalog-sort-type a {
     margin-right: 26px;
 }
@@ -1256,11 +1288,11 @@ a.footer-login::before {
     opacity: .2;
 }
 
-.catalog-sort .btn-down:hover, .catalog-sort .btn-up:hover {
-    opacity: .4;
+.catalog-sort .btn-down:hover, .catalog-sort .btn-up {
+    opacity: 1;
 }
 .catalog-sort .btn-down:active, .catalog-sort .btn-up:active, .catalog-sort .current, .catalog-sort .current:hover, .catalog-sort a:active {
-    opacity: 1;
+    opacity: 0.4;
 }
 
 /*Переключалки сортировки*/
@@ -1315,8 +1347,8 @@ a.footer-login::before {
 
 .form-legend {
     width: 100%;
-    margin-bottom: 18px;
-    padding-top: 11px;
+    margin-bottom: 20px;
+    padding-top: 10px;
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     color: #000;
@@ -1383,9 +1415,10 @@ a.footer-login::before {
     content: "";
     position: absolute;
     background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
     top: 8px;
     left: 0;
-    width: 23px;
+    width: 27px;
     height: 23px;
 }
 
