@@ -448,16 +448,15 @@ a.index-catalog::after {
     margin-bottom: 43px;
 }
 .main-description a {
-    min-width: 210px;
-    max-width: 385px;
     margin-bottom: 53px;
-    margin-left: 1px;
+    padding-left: 44px;
+    width: auto;
 }
+
 .device-btn {
     position: relative;
     display: block;
     padding: 9px 5px;
-    left: 44px;
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     color: #000;
@@ -472,7 +471,7 @@ a.index-catalog::after {
     content: "";
     position: absolute;
     top: 40%;
-    left: -44px;
+    margin-left: -44px;
     z-index: -1;
     width: 220px;
     height: 20%;
@@ -597,17 +596,15 @@ a.index-catalog::after {
     position: relative;
     display: block;
     top: -20px;
-    left: -20px;
     width: 300px;
-    margin-top: 0;
-    padding-left: 0;
+    text-align: center;
     list-style: none;
 }
 .services-btn::after {
     content: "";
     position: absolute;
-    top: 41%;
-    right: 0px;
+    top: 35%;
+    right: 58px;
     display: block;
     width: 7px;
     height: 319px;
@@ -629,6 +626,7 @@ a.index-catalog::after {
     outline: none;
     cursor: pointer;
 }
+
 .services-btn label::before {
     content: "";
     position: absolute;
@@ -646,10 +644,12 @@ a.index-catalog::after {
 }
 #services-btn-1:checked~.index-main label[for=services-btn-1]::before, #services-btn-2:checked~.index-main label[for=services-btn-2]::before, #services-btn-3:checked~.index-main label[for=services-btn-3]::before {
     top: 0;
-    width: 255px;
+    width: 285px;
     height: 100%;
     background-color: #000;
 }
+
+
 .services-item {
     position: relative;
     top: -42px;
@@ -678,6 +678,7 @@ a.index-catalog::after {
     margin-bottom: 26px;
     letter-spacing: .018em;
 }
+
 .services-item p {
     padding-top: 5px;
     padding-right: 300px;
@@ -729,6 +730,10 @@ a.index-catalog::after {
     display: block;
     width: 560px;
 }
+.about-us .device-btn {
+    width: auto;
+    margin-left: 0;
+}
 .about-us li::before, .about-us::before, .contacts::before, .footer-left::after {
     content: "";
     position: absolute;
@@ -764,8 +769,7 @@ a.index-catalog::after {
     padding-left: 35px;
 }
 .about-us a {
-    min-width: 250px;
-    max-width: 475px;
+    text-align: center;
 }
 .about-us li::before {
     top: 50%;
